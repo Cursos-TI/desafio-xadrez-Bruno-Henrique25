@@ -14,6 +14,10 @@ int main() {
     int casas_Torre = 5;
     //Número de casas a serem percorridas pela peça "Rainha"
     int casas_Rainha = 8;
+    //Total de movimentos a ser realizado pelo cavalo.
+    int cavalo_movimentos_Totais = 0;
+    //Variável do movimento perpendicular (de uma casa) da pela "Cavalo". Finalizando, assim, seu característico movimento em "L". 
+    int cavalo_Movimento_Final = 0;
     
     
     //*** MOVIMENTAÇÃO DAS PEÇAS DE XADREZ ***
@@ -44,6 +48,19 @@ int main() {
             casas_Rainha--;
         } 
     while (casas_Rainha > 0);
+
+
+    //Movimentação do Cavalo
+    printf("\n\nO cavalo irá se mover!\n\n");
+    for (cavalo_movimentos_Totais; cavalo_movimentos_Totais < 2; cavalo_movimentos_Totais++) 
+        {
+            printf("Baixo!\n");
+            cavalo_Movimento_Final++;
+            while (cavalo_Movimento_Final == 2) {
+                printf("Esquerda!\n");
+                cavalo_Movimento_Final++;
+            }
+        };
 
     return 0;
 }
